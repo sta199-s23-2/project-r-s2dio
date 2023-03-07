@@ -18,9 +18,15 @@ library(tidyverse)
 
 -   Identify the source of the data.
 
+Our data is sourced from the 2018 Central Park Squirrel Census, compiled by NYC Open Data.
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+The data was collected in October 2018 by hundreds of volunteers and key NYC entities who tallied the squirrels in Central Park, New York on behalf of The Squirrel Census (the original data curator).
+
 -   Write a brief description of the observations.
+
+The observations include 3,023 squirrel sightings, unique squirrel IDs, dates spotted, location, age, primary and secondary fur color, elevation, squirrel activities when spotted (running, chasing, climbing, foraging, eating, or other), sounds, tail movement, and interactions between squirrels and with humans.
 
 ## Research question
 
