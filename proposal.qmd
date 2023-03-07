@@ -18,27 +18,37 @@ library(tidyverse)
 
 -   Identify the source of the data.
 
-Our data is sourced from the 2018 Central Park Squirrel Census, compiled by NYC Open Data.
+**Our data is sourced from the 2018 Central Park Squirrel Census, compiled by NYC Open Data.**
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
-The data was collected in October 2018 by hundreds of volunteers and key NYC entities who tallied the squirrels in Central Park, New York on behalf of The Squirrel Census (the original data curator).
+**The data was collected in October 2018 by hundreds of volunteers and key NYC entities who tallied the squirrels in Central Park, New York on behalf of The Squirrel Census (the original data curator).**
 
 -   Write a brief description of the observations.
 
-The observations include 3,023 squirrel sightings, unique squirrel IDs, dates spotted, location, age, primary and secondary fur color, elevation, squirrel activities when spotted (running, chasing, climbing, foraging, eating, or other), sounds, tail movement, and interactions between squirrels and with humans.
+**The observations include 3,023 squirrel sightings, unique squirrel IDs, dates spotted, location, age, primary and secondary fur color, elevation, squirrel activities when spotted (running, chasing, climbing, foraging, eating, or other), sounds, tail movement, and interactions between squirrels and with humans.**
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+**Research question: What is the relationship between squirrel location, squirrel climbing, and whether the squirrel runs from human spotters?**
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+**Our hypothesis is that squirrels spotted on a ground plane will run from human spotters more than squirrels above ground, given the spotter is on their same elevation and thus constitutes a greater threat. Moreover, we hypothesize that squirrels climbing will run from human spotters more than squirrels above ground and more than squirrels spotted on a ground plane, given such squirrels might climb to escape the human.**
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+**All variables are categorical variables - climbing, location, runs from.**
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
+
+**https://www.jstor.org/stable/3800817?seq=8**
+
+**https://www.jstor.org/stable/3797645**
 
 -   Provide a one paragraph summary about the article.
 
