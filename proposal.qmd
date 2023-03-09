@@ -68,9 +68,15 @@ library(tidyverse)
 
 -   Identify the source of the data.
 
+This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was foundn in the open source data site, Kaggle.
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+The data was scraped from <http://barttorvik.com/trank.php#>. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.
+
 -   Write a brief description of the observations.
+
+The dataset
 
 ## Research question
 
