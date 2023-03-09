@@ -59,7 +59,7 @@ library(tidyverse)
 ```{r}
 #| label: load-data-1
 
-# add code here
+glimpse(Squirrels)
 ```
 
 # Data 2
@@ -86,7 +86,11 @@ The dataset has various variables that characterize different Division I basketb
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+Our research topic will explore the different facets that are considered in possibly ranking Division I college basketball teams. Our hypothesis is that the ACC has the highest success rate in Division 1 Basketball.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+The types of variables in our research question will utilize categorical variables (such as the team and conference) and quantitative variables (like number of games won, turnover rate, and point percentages)
 
 ## Literature
 
@@ -101,7 +105,7 @@ The dataset has various variables that characterize different Division I basketb
 ```{r}
 #| label: load-data-2
 
-slice(cbb)
+glimpse(cbb)
 ```
 
 # Data 3
