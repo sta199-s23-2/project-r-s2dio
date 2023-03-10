@@ -82,23 +82,53 @@ The dataset has various variables that characterize different Division I basketb
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-**Research question:** Which Division 1 basketball conference has the highest success rate from the 2013-2019 season? (number of game wins, offensive rebound rates, total points, etc.)
+**Research question:** Which Division 1 basketball conference has the highest success rate from the 2013-2019 season? (number of game wins, offensive rebound rates, total points, etc.). And which best factors (other than wins)(offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc) best predict regular season success (win percentage)(from 2013 to 2019)? And does this also predict (better predict?/ worse predict) post season success?
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-Our research topic will explore the different facets that are considered in possibly ranking Division I college basketball teams. Our hypothesis is that the ACC has the highest success rate in Division 1 Basketball.
+Our research topic will explore the different facets that are considered in possibly predicting the success of college DI basketball teams in 2013-2019. We hypothesize that the best predictors for regular season success (win percentage) will be offensive and defensive efficiency and it will also predict postseason success just as well.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-The types of variables in our research question will utilize categorical variables (such as the team and conference) and quantitative variables (like number of games won, turnover rate, and point percentages)
+Conference (categorical)
+
+Wins(quantitative)
+
+Losses(quantitative)
+
+Adjusted offensive rating(quantitative)
+
+Adjusted defensive rating(quantitative)
+
+3pt success rate (allowed and committed)(quantitative)
+
+2pt success rate (allowed and committed)(quantitative)
+
+Field goal success rate(quantitative)
+
+Effective field goal percentage (allowed and committed)(quantitative)
+
+Rebound and turnover rates (allowed and committed)(quantitative)
+
+How to calculate success
+
+Post season- How far they made it in March madness (not in tournament, round of 64, round of 32, sweet 16, elite 8, final 4, runner up, champions) (categorical)
+
+Regular season - Seed for the tournament (categorical) (easily changeable to quantitative ) and Win percentage (quantitative)
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
+    -   <https://www.ncaa.com/news/basketball-men/article/2018-10-05/best-conferences-ncaa-tournament-play-1985>
+
 -   Provide a one paragraph summary about the article.
 
+    -   This article looks at the success of conferences since the NCAA tournament was made into a 64 team format (now 68). With the ACC being largely in control statistically, they are the dominant post season  conference (which is argued to be the best team predictor since in the tournament teams from the same conference rarely play each other). The ACC also has a winning record against 29 of the 32 conferences. The ACC is also the league's only double digit champion (with 10 titles since 1985) and has the highest win percentage. (\*This article is also reputable as it uses data directly from the NCAA and it written and researched by the NCAA)
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    -   In our research question we wonder why this is the pattern. Our data should show this same pattern, but it should also suggest a predictor for this behavior as well. Why do some teams perform at a higher success and what are the variables that predict success? 
 
 ## Glimpse of data
 
