@@ -68,7 +68,7 @@ glimpse(Squirrels)
 
 -   Identify the source of the data.
 
-This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was foundn in the open source data site, Kaggle.
+This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle.
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
@@ -144,6 +144,7 @@ glimpse(cbb)
 
 -   Identify the source of the data.
 
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
 -   Write a brief description of the observations.
@@ -169,5 +170,6 @@ glimpse(cbb)
 ```{r}
 #| label: load-data-3
 
-# add code here
+glimpse(the_counted_2016)
+
 ```
