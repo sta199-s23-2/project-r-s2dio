@@ -48,11 +48,17 @@ library(tidyverse)
 
 **https://www.jstor.org/stable/3800817?seq=8**
 
-**https://www.jstor.org/stable/3797645**
-
 -   Provide a one paragraph summary about the article.
 
+**The article "Census Methods for Eastern Gray Squirrels" by Stephen H. Bouffard and Dale Hein examines the efficacy of various census methods for estimating squirrel populations in populated areas. The study found that visually counting squirrels can be an effective mechanism for estimating populations, although may leave other squirrels in less visible locations undetected. The study further analyzes the impact of various factors on squirrel visibility, including weather conditions and food availability.**
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+**There is limited research on the relationship between squirrel visibility and**
+
+**Our research question seeks to tybuild upon the relationship between several variables, squirrel visibili**
+
+**Research question: What is the relationship between squirrel location, squirrel climbing, and whether the squirrel runs from human spotters?**
 
 ## Glimpse of data
 
