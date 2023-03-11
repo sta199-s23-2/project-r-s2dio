@@ -50,15 +50,11 @@ library(tidyverse)
 
 -   Provide a one paragraph summary about the article.
 
-**The article "Census Methods for Eastern Gray Squirrels" by Stephen H. Bouffard and Dale Hein examines the efficacy of various census methods for estimating squirrel populations in populated areas. The study found that visually counting squirrels can be an effective mechanism for estimating populations, although may leave other squirrels in less visible locations undetected. The study further analyzes the impact of various factors on squirrel visibility, including weather conditions and food availability.**
+**The article "Census Methods for Eastern Gray Squirrels" by Stephen H. Bouffard and Dale Hein examines the efficacy of various census methods for estimating squirrel populations in populated areas. The study found that visually counting squirrels can be an effective mechanism for estimating populations, although may leave other squirrels in less visible locations undetected. The study further analyzes the impact of various factors on squirrel visibility (such as weather conditions and food availability).**
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
-**There is limited research on the relationship between squirrel visibility and**
-
-**Our research question seeks to tybuild upon the relationship between several variables, squirrel visibili**
-
-**Research question: What is the relationship between squirrel location, squirrel climbing, and whether the squirrel runs from human spotters?**
+**There is limited research on the variables which impact squirrel visibility. Our research question seeks to build upon this study's research into the factors that influence squirrels' propensity to venture into visible areas, specifically focusing on whether the presence of human spotters is a factor that influences squirrel visibility. If the presence of human spotters has a positive correlation with squirrels staying hidden or retreating, human presence may be an additional factor impacting squirrel visibility that ought be considered in future squirrel censuses.**
 
 ## Glimpse of data
 
@@ -154,7 +150,7 @@ This specific data set was found on data world.
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
-The data is from the Guardian and verified crowdsourcing from the Guardian that looks at deaths caused by police in 2016 with the purpose of monitoring demographics to tell the stories of how people died. The data is ever changing (with new information) and this data set was downloaded March 10th, 2023. 
+The data is from the Guardian and verified crowdsourcing from the Guardian that looks at deaths caused by police in 2016 with the purpose of monitoring demographics to tell the stories of how people died. The data is ever changing (with new information) and this data set was downloaded March 10th, 2023.
 
 -   Write a brief description of the observations.
 
@@ -172,18 +168,13 @@ This topic will look at which groups are more likely to be victims of 2016 deadl
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-Gender (categorical)
-Age (quantitative) 
-Race (categorical)
-City (categorical)
-State (categorical)
-Armed (if they were how were they armed) (categorical)
+Gender (categorical) Age (quantitative) Race (categorical) City (categorical) State (categorical) Armed (if they were how were they armed) (categorical)
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
-https://spssi.onlinelibrary.wiley.com/doi/full/10.1111/josi.12246?casa_token=uEDJeuc8b5wAAAAA%3A76_aPEqicnTsh_5r_urafVPnuZwbcxp4qsjW40HhhYge0Yu62iYY5kL-hYMZ9rxFxi3QFOZV4Pk 
+https://spssi.onlinelibrary.wiley.com/doi/full/10.1111/josi.12246?casa_token=uEDJeuc8b5wAAAAA%3A76_aPEqicnTsh_5r_urafVPnuZwbcxp4qsjW40HhhYge0Yu62iYY5kL-hYMZ9rxFxi3QFOZV4Pk
 
 -   Provide a one paragraph summary about the article.
 
