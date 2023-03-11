@@ -20,6 +20,8 @@ library(tidyverse)
 
 **Our data is sourced from the 2018 Central Park Squirrel Census, compiled by NYC Open Data.**
 
+**https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw**
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
 **The data was collected in October 2018 by hundreds of volunteers and key NYC entities who tallied the squirrels in Central Park, New York on behalf of The Squirrel Census (the original data curator).**
@@ -70,67 +72,67 @@ glimpse(Squirrels)
 
 -   Identify the source of the data.
 
-This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle.
+**This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle.**
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
-The data was scraped from <http://barttorvik.com/trank.php#>. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.
+**The data was scraped from <http://barttorvik.com/trank.php#>. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.**
 
 -   Write a brief description of the observations.
 
-The dataset has various variables that characterize different Division I basketball teams--- such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.
+**The dataset has various variables that characterize different Division I basketball teams--- such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.**
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-**Research question:** Which Division 1 basketball conference has the highest success rate from the 2013-2019 season? (number of game wins, offensive rebound rates, total points, etc.). And which best factors (other than wins)(offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc) best predict regular season success (win percentage)(from 2013 to 2019)? And does this also predict (better predict?/ worse predict) post season success?
+[**Research question**]{.underline}**: Which Division 1 basketball conference has the highest success rate from the 2013-2019 season? (number of game wins, offensive rebound rates, total points, etc.). And which best factors (other than wins)(offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc) best predict regular season success (win percentage)(from 2013 to 2019)? And does this also predict (better predict?/ worse predict) post season success?**
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-Our research topic will explore the different facets that are considered in possibly predicting the success of college DI basketball teams in 2013-2019. We hypothesize that the best predictors for regular season success (win percentage) will be offensive and defensive efficiency and it will also predict postseason success just as well.
+**Our research topic will explore the different facets that are considered in possibly predicting the success of college DI basketball teams in 2013-2019. We hypothesize that the best predictors for regular season success (win percentage) will be offensive and defensive efficiency and it will also predict postseason success just as well.**
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-Conference (categorical)
+**Conference (categorical)**
 
-Wins(quantitative)
+**Wins(quantitative)**
 
-Losses(quantitative)
+**Losses(quantitative)**
 
-Adjusted offensive rating(quantitative)
+**Adjusted offensive rating(quantitative)**
 
-Adjusted defensive rating(quantitative)
+**Adjusted defensive rating(quantitative)**
 
-3pt success rate (allowed and committed)(quantitative)
+**3pt success rate (allowed and committed)(quantitative)**
 
-2pt success rate (allowed and committed)(quantitative)
+**2pt success rate (allowed and committed)(quantitative)**
 
-Field goal success rate(quantitative)
+**Field goal success rate(quantitative)**
 
-Effective field goal percentage (allowed and committed)(quantitative)
+**Effective field goal percentage (allowed and committed)(quantitative)**
 
-Rebound and turnover rates (allowed and committed)(quantitative)
+**Rebound and turnover rates (allowed and committed)(quantitative)**
 
-How to calculate success
+**How to calculate success**
 
-Post season- How far they made it in March madness (not in tournament, round of 64, round of 32, sweet 16, elite 8, final 4, runner up, champions) (categorical)
+**Post season- How far they made it in March madness (not in tournament, round of 64, round of 32, sweet 16, elite 8, final 4, runner up, champions) (categorical)**
 
-Regular season - Seed for the tournament (categorical) (easily changeable to quantitative ) and Win percentage (quantitative)
+**Regular season - Seed for the tournament (categorical) (easily changeable to quantitative ) and Win percentage (quantitative)**
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
-    -   <https://www.ncaa.com/news/basketball-men/article/2018-10-05/best-conferences-ncaa-tournament-play-1985>
+    -   [**https://www.ncaa.com/news/basketball-men/article/2018-10-05/best-conferences-ncaa-tournament-play-1985**](https://www.ncaa.com/news/basketball-men/article/2018-10-05/best-conferences-ncaa-tournament-play-1985){.uri}
 
 -   Provide a one paragraph summary about the article.
 
-    -   This article looks at the success of conferences since the NCAA tournament was made into a 64 team format (now 68). With the ACC being largely in control statistically, they are the dominant post season  conference (which is argued to be the best team predictor since in the tournament teams from the same conference rarely play each other). The ACC also has a winning record against 29 of the 32 conferences. The ACC is also the league's only double digit champion (with 10 titles since 1985) and has the highest win percentage. (\*This article is also reputable as it uses data directly from the NCAA and it written and researched by the NCAA)
+    -   **This article looks at the success of conferences since the NCAA tournament was made into a 64 team format (now 68). With the ACC being largely in control statistically, they are the dominant post season  conference (which is argued to be the best team predictor since in the tournament teams from the same conference rarely play each other). The ACC also has a winning record against 29 of the 32 conferences. The ACC is also the league's only double digit champion (with 10 titles since 1985) and has the highest win percentage. (\*This article is also reputable as it uses data directly from the NCAA and it written and researched by the NCAA)**
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
-    -   In our research question we wonder why this is the pattern. Our data should show this same pattern, but it should also suggest a predictor for this behavior as well. Why do some teams perform at a higher success and what are the variables that predict success? 
+    -   **In our research question we wonder why this is the pattern. Our data should show this same pattern, but it should also suggest a predictor for this behavior as well. Why do some teams perform at a higher success and what are the variables that predict success?** 
 
 ## Glimpse of data
 
@@ -146,43 +148,45 @@ glimpse(cbb)
 
 -   Identify the source of the data.
 
-This specific data set was found on data world.
+**This specific data set was found on data world.**
+
+**https://data.world/publicsafety/people-killed-by-police-in-us**
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
-The data is from the Guardian and verified crowdsourcing from the Guardian that looks at deaths caused by police in 2016 with the purpose of monitoring demographics to tell the stories of how people died. The data is ever changing (with new information) and this data set was downloaded March 10th, 2023.
+**The data is from the Guardian and verified crowdsourcing from the Guardian that looks at deaths caused by police in 2016 with the purpose of monitoring demographics to tell the stories of how people died. The data is ever changing (with new information) and this data set was downloaded March 10th, 2023.**
 
 -   Write a brief description of the observations.
 
-The observations look at the names, age, gender, ethnicity of the victims, if they were armed, where they were killed, and which agency they were killed by (Ex. which police station was the officer based in).
+**The observations look at the names, age, gender, ethnicity of the victims, if they were armed, where they were killed, and which agency they were killed by (Ex. which police station was the officer based in).**
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-Which groups are more likely to be killed by police while looking at gender, armed status, race, and location?
+**Which groups are more likely to be killed by police while looking at gender, armed status, race, and location?**
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-This topic will look at which groups are more likely to be victims of 2016 deadly police violence. We will examine gender with regards to deadly police force, race, and also location by state. We hope this may be able to help us realize which areas in the country and which biases we should focus on first when solving the problem of deadly police force. We hypothesize that males, younger people, black people, and those from states with the highest population will be victims the most of deadly police force.
+**This topic will look at which groups are more likely to be victims of 2016 deadly police violence. We will examine gender with regards to deadly police force, race, and also location by state. We hope this may be able to help us realize which areas in the country and which biases we should focus on first when solving the problem of deadly police force. We hypothesize that males, younger people, black people, and those from states with the highest population will be victims the most of deadly police force.**
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-Gender (categorical) Age (quantitative) Race (categorical) City (categorical) State (categorical) Armed (if they were how were they armed) (categorical)
+**Gender (categorical) Age (quantitative) Race (categorical) City (categorical) State (categorical) Armed (if they were how were they armed) (categorical)**
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
-https://spssi.onlinelibrary.wiley.com/doi/full/10.1111/josi.12246?casa_token=uEDJeuc8b5wAAAAA%3A76_aPEqicnTsh_5r_urafVPnuZwbcxp4qsjW40HhhYge0Yu62iYY5kL-hYMZ9rxFxi3QFOZV4Pk
+**https://spssi.onlinelibrary.wiley.com/doi/full/10.1111/josi.12246?casa_token=uEDJeuc8b5wAAAAA%3A76_aPEqicnTsh_5r_urafVPnuZwbcxp4qsjW40HhhYge0Yu62iYY5kL-hYMZ9rxFxi3QFOZV4Pk**
 
 -   Provide a one paragraph summary about the article.
 
-This article looks at police caused deaths and also the death of on duty/ off duty police officers that were mistaken to not be officers. It goes into detail of how race has a difference in statistics. More white people are killed when armed vs unarmed while black people are killed more when unarmed vs armed. Black people in 2015 and 2016 also are killed more as a percentage of unarmed people killed. It then goes on to say that off duty officers who are black are more likely to get killed than white officers by police violence. Next it looks into the psychology of this effect looking at things such as misinformation, weapon perception and shooter bias.
+**This article looks at police caused deaths and also the death of on duty/ off duty police officers that were mistaken to not be officers. It goes into detail of how race has a difference in statistics. More white people are killed when armed vs unarmed while black people are killed more when unarmed vs armed. Black people in 2015 and 2016 also are killed more as a percentage of unarmed people killed. It then goes on to say that off duty officers who are black are more likely to get killed than white officers by police violence. Next it looks into the psychology of this effect looking at things such as misinformation, weapon perception and shooter bias.**
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
-This builds on our question because it looks at race and armed status, but we will build on this by looking at specific locations as well as gender as well.
+**This builds on our question because it looks at race and armed status, but we will build on this by looking at specific locations as well as gender as well.**
 
 ## Glimpse of data
 
