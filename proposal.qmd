@@ -144,26 +144,48 @@ glimpse(cbb)
 
 -   Identify the source of the data.
 
+This specific data set was found on data world.
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+The data is from the Guardian and verified crowdsourcing from the Guardian that looks at deaths caused by police in 2016 with the purpose of monitoring demographics to tell the stories of how people died. The data is ever changing (with new information) and this data set was downloaded March 10th, 2023. 
+
 -   Write a brief description of the observations.
+
+The observations look at the names, age, gender, ethnicity of the victims, if they were armed, where they were killed, and which agency they were killed by (Ex. which police station was the officer based in).
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+Which groups are more likely to be killed by police while looking at gender, armed status, race, and location?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+This topic will look at which groups are more likely to be victims of 2016 deadly police violence. We will examine gender with regards to deadly police force, race, and also location by state. We hope this may be able to help us realize which areas in the country and which biases we should focus on first when solving the problem of deadly police force. We hypothesize that males, younger people, black people, and those from states with the highest population will be victims the most of deadly police force.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+Gender (categorical)
+Age (quantitative) 
+Race (categorical)
+City (categorical)
+State (categorical)
+Armed (if they were how were they armed) (categorical)
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
+https://spssi.onlinelibrary.wiley.com/doi/full/10.1111/josi.12246?casa_token=uEDJeuc8b5wAAAAA%3A76_aPEqicnTsh_5r_urafVPnuZwbcxp4qsjW40HhhYge0Yu62iYY5kL-hYMZ9rxFxi3QFOZV4Pk 
+
 -   Provide a one paragraph summary about the article.
 
+This article looks at police caused deaths and also the death of on duty/ off duty police officers that were mistaken to not be officers. It goes into detail of how race has a difference in statistics. More white people are killed when armed vs unarmed while black people are killed more when unarmed vs armed. Black people in 2015 and 2016 also are killed more as a percentage of unarmed people killed. It then goes on to say that off duty officers who are black are more likely to get killed than white officers by police violence. Next it looks into the psychology of this effect looking at things such as misinformation, weapon perception and shooter bias.
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+This builds on our question because it looks at race and armed status, but we will build on this by looking at specific locations as well as gender as well.
 
 ## Glimpse of data
 
