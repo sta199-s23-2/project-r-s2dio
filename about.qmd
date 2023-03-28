@@ -8,6 +8,6 @@ This project was developed by R-s2dio For [STA 199: Introduction to Data Science
 
 -   Angelie Quimbo: Angelie is a first year student from Nashville, Tennessee, who intends to major in political science.
 -   Jack Roberts: Jack is a Freshman from Nashville, Tennessee, who intends to major in economics.
--   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
+-   Lukas Sanchez: Lukas is a sophomore from New York, New York who is a majoring in history and minoring in cinematic arts.
 -   Kaitlyn Maher: Kaitlyn is a sophomore from Ashburn, Virginia, who is majoring in public policy.
 -   ...
