@@ -7,4 +7,24 @@ execute:
   echo: true
 ---
 
-Add project writeup here.
+**Introduction and data**
+
+-- Do not copy and paste what you see about your data online
+
+-- Flush out where the data come from, how they were sampled, description of observations, etc.
+
+-- Challenge: Put more detail into the intro (even if feedback was not given)
+
+**Methodology**
+
+-- How do you plan to answer your research question?
+
+-- Prediction? Inference? Both?
+
+**Results**
+
+-- What are you finding out?
+
+-- Make sure that this is connected to your research question. It is easy to get excited and explore your data set. Make sure that all results you generate are in-line with the research question you have asked
+
+**W+F**
