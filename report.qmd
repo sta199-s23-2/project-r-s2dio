@@ -7,13 +7,19 @@ execute:
   echo: true
 ---
 
+**Dataset 2 (D1 college basketball)**
+
 **Introduction and data**
 
--- Do not copy and paste what you see about your data online
+*-- Do not copy and paste what you see about your data online*
 
--- Flush out where the data come from, how they were sampled, description of observations, etc.
+*-- Flush out where the data come from, how they were sampled, description of observations, etc.*
 
--- Challenge: Put more detail into the intro (even if feedback was not given)
+*-- Challenge: Put more detail into the intro (even if feedback was not given)*
+
+This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle. The data was scraped from http://barttorvik.com/trank.php#. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.
+
+The dataset has various variables that characterize different Division I basketball teams--- such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.
 
 **Methodology**
 
