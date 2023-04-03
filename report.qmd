@@ -13,7 +13,7 @@ execute:
 
 As Duke students, it goes without saying that Duke basketball adds on to our unique college experience. Noting Duke mens basketball's historical successes, we have grown interested in researching more about other Division 1 mens basketball programs in universities throughout the country.
 
-This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle. The data was scraped from http://barttorvik.com/trank.php#. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.
+The data that we will be utilizing is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle. The data was scraped from http://barttorvik.com/trank.php#. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.
 
 The dataset has various variables that characterize different Division I basketball teams--- such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.
 
@@ -23,9 +23,9 @@ The dataset has various variables that characterize different Division I basketb
 
 -- Prediction? Inference? Both?
 
-**Which Division 1 basketball conference has the highest overall success rate from the 2013-2019 seasons? And which best factors (other than wins)(offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc) best predict regular season success (win percentage)(from 2013 to 2019)? And does this also predict (better predict?/ worse predict) post season success?**
+**Our research question: "Which Division 1 basketball conference has the highest overall success rate from the 2013-2019 seasons? And which best factors (other than wins)--- (offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc)--- best predict overall regular season success from 2013 to 2019? And does this also predict (better predict/ worse predict) post season success?"**
 
-*We define "overall success rate" through the metrics of number of game wins, offensive rebound rates, total points, etc.*
+*\*We define "overall success rate" through the metrics of number of game wins, offensive rebound rates, total points, etc.*
 
 **Results**
 
