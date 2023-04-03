@@ -29,6 +29,8 @@ The dataset has various variables that characterize different Division I basketb
 
 Our central research question (the first question) is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
 
+We predict that the conference with the most programs ranked highly will be considered the D1 mens basketball conference with the highest overall success rate. We also predict that an individual program will be ranked higher by the number of points they scored, in relation to their opponent, regardless of the outcome.
+
 **Results**
 
 -- What are you finding out?
