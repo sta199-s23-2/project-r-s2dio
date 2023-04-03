@@ -27,6 +27,8 @@ The dataset has various variables that characterize different Division I basketb
 
 *\*We define "overall success rate" through the metrics of number of game wins, offensive rebound rates, total points, etc.*
 
+Our central research question (the first question) is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
+
 **Results**
 
 -- What are you finding out?
