@@ -34,7 +34,7 @@ The dataset has various variables that characterize different Division I basketb
 
 -- Prediction? Inference? Both?
 
-**Our research question: "How does regular season adjusted offensive efficiency, effective field goal, and wins above bubble correlate to being a 1-seed team and post season success?"**
+**Our research question: "How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?"**
 
 Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
 
@@ -50,8 +50,6 @@ We predict that the conference with the most programs ranked highly will be cons
 cbb_new <- cbb |>
   rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
-
-**W+F**
 
 ```{r}
 cbb |>
@@ -70,13 +68,32 @@ cbb |>
 
 slice(cbb)
 
-SEED_Model <- linear_reg() |>
+SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
-  fit(SEED ~ ADJOE *ADJDE, data = cbb)
+  fit(SEED ~ ADJOE, data = cbb)
 
-SEED_Model
+SEED_Model_2 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJDE, data = cbb)
 
+SEED_Model_3 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE * ADJDE, data = cbb)
+
+SEED_Model_1
+SEED_Model_2
+SEED_Model_3
 
 ```
+
+Model1 (predicting seed based on adjusted offensive efficiency)
+
+$\widehat{SEED} = 69.90 - 0.55*ADJOE$
+
+Model2 (predicting seed based on adjusted defensive efficiency)
+
+$\widehat{SEED} = -49.52 + 0.60*ADJDE$
+
+Model3 (predicting seed based on adjusted offensive and defensive efficiency)
 
 $\widehat{SEED} = -183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
