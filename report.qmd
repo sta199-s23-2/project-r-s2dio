@@ -65,5 +65,14 @@ cbb_1_seed_2015_adjoe <- cbb |>
   summarise(mean_ADJOE = mean(ADJOE)) |>
   print()
 
+cbb |>
+  ggplot(aes(x = SEED,
+             y = ADJOE)) +
+  geom_point()
+
+cbb |>
+  ggplot(aes(x = SEED,
+             y = ADJDE)) +
+  geom_point()
 
 ```
