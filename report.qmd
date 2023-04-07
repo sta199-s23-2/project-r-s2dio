@@ -66,8 +66,6 @@ cbb |>
 
 ```{r}
 
-slice(cbb)
-
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
   fit(SEED ~ ADJOE, data = cbb)
@@ -97,3 +95,31 @@ $\widehat{SEED} = -49.52 + 0.60*ADJDE$
 Model3 (predicting seed based on adjusted offensive and defensive efficiency)
 
 $\widehat{SEED} = -183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
+
+```{r}
+
+SEED_Model_1 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE, data = cbb) |>
+  glance() |>
+  pull(adj.r.squared)
+
+SEED_Model_2 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJDE, data = cbb) |>
+  glance() |>
+  pull(adj.r.squared)
+
+SEED_Model_3 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE * ADJDE, data = cbb) |>
+  glance() |>
+  pull(adj.r.squared)
+
+SEED_Model_1
+SEED_Model_2
+SEED_Model_3
+
+```
+
+The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value. Adjusted offensive efficiency is the second best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed.
