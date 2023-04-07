@@ -48,9 +48,9 @@ We predict that the conference with the most programs ranked highly will be cons
 
 -- Make sure that this is connected to your research question. It is easy to get excited and explore your data set. Make sure that all results you generate are in-line with the research question you have asked
 
-```{r}
-cbb_new <- cbb |>
-  rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
-```
-
 **W+F**
+
+```{r}
+cbb -> cbb_seed |>
+  filter(seed)
+```
