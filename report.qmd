@@ -34,11 +34,9 @@ The dataset has various variables that characterize different Division I basketb
 
 -- Prediction? Inference? Both?
 
-**Our research question: "Which Division 1 basketball team has the highest overall success rate from the 2013-2019 seasons? And which best factors (other than wins)--- (offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc)--- best predict overall regular season success from 2013 to 2019? And does this also predict (better predict/ worse predict) post season success?"**
+**Our research question: "How does regular season adjusted offensive efficiency, effective field goal, and wins above bubble correlate to being a 1-seed team and post season success?"**
 
-*\*We define "overall success rate" through the metrics of number of game wins, offensive rebound rates, total points, etc.*
-
-Our central research question (the first question) is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
+Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
 
 We predict that the conference with the most programs ranked highly will be considered the D1 mens basketball conference with the highest overall success rate. We also predict that an individual program will be ranked higher by the number of points they scored, in relation to their opponent, regardless of the outcome.
 
@@ -57,7 +55,9 @@ cbb_new <- cbb |>
 
 ```{r}
 cbb_seed <- cbb |>
-  filter(SEED == 1) |>
-  summarise(mean_ADJOE = mean(ADJOE)) |>
+  filter(SEED == 1)
+
+cbb_seed |>
+summarise(mean_ADJOE = mean(ADJOE)) |>
   print()
 ```
