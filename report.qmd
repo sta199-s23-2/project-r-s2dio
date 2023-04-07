@@ -7,6 +7,17 @@ execute:
   echo: true
 ---
 
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(tidymodels)
+```
+
+```{r}
+cbb <- read_csv("data/cbb.csv")
+```
+
 **Dataset 2 (D1 college basketball)**
 
 **Introduction and data**
