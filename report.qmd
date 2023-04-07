@@ -54,17 +54,15 @@ cbb_new <- cbb |>
 **W+F**
 
 ```{r}
+cbb |>
+  ggplot(aes(x = SEED,
+             y = ADJOE)) +
+  geom_point()
 
-cbb_1_seed_2014_adjoe <- cbb |>
-  filter(SEED == 1, YEAR == 2014) |>
-  summarise(mean_ADJOE = mean(ADJOE)) |>
-  print()
-  
-cbb_1_seed_2015_adjoe <- cbb |>
-  filter(SEED == 1, YEAR == 2015) |>
-  summarise(mean_ADJOE = mean(ADJOE)) |>
-  print()
-
+cbb |>
+  ggplot(aes(x = SEED,
+             y = ADJDE)) +
+  geom_point()
 
 ```
 
