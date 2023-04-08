@@ -19,10 +19,6 @@ The dataset has various variables that characterize different Division I basketb
 
 **Methodology**
 
--- How do you plan to answer your research question?
-
--- Prediction? Inference? Both?
-
 **Our research question: "Which Division 1 basketball conference has the highest overall success rate from the 2013-2019 seasons? And which best factors (other than wins)--- (offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc)--- best predict overall regular season success from 2013 to 2019? And does this also predict (better predict/ worse predict) post season success?"**
 
 *\*We define "overall success rate" through the metrics of number of game wins, offensive rebound rates, total points, etc.*
