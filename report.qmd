@@ -47,7 +47,7 @@ We predict that the conference with the most programs ranked highly will be cons
 **Results**
 
 -- What are you finding out?
-We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both)
+We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
 
 ```{r}
