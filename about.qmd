@@ -7,7 +7,6 @@ editor: visual
 This project was developed by R-s2dio For [STA 199: Introduction to Data Science](https://sta199-s23-2.github.io/) at Duke University. The team is comprised of the following team members.
 
 -   Angelie Quimbo: Angelie is a first year student from Nashville, Tennessee, who intends to major in political science.
--   Jack Roberts: Jack is a Freshman from Nashville, Tennessee, who intends to major in economics.
--   Lukas Sanchez: Lukas is a sophomore from New York, New York who is a majoring in history and minoring in cinematic arts.
+-   Jack Roberts: Jack is a freshman from Nashville, Tennessee, who intends to major in economics.
+-   Lukas Sanchez: Lukas is a sophomore from New York, New York who is majoring in history and minoring in cinematic arts and music.
 -   Kaitlyn Maher: Kaitlyn is a sophomore from Ashburn, Virginia, who is majoring in public policy.
--   ...
