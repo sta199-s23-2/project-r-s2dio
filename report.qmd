@@ -122,4 +122,4 @@ SEED_Model_3
 
 ```
 
-The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value. Adjusted offensive efficiency is the second best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed.
+The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value. Adjusted offensive efficiency is the second best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed.
