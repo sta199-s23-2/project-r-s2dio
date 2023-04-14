@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -157,7 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -207,49 +212,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.2.2</code></pre>
-</div>
 </div>
 <section id="data-1" class="level1">
 <h1>Data 1</h1>
 <section id="introduction-and-data" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li>Identify the source of the data.</li>
 </ul>
+<p><strong>Our data is sourced from the 2018 Central Park Squirrel Census, compiled by NYC Open Data.</strong></p>
+<p><strong>https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw</strong></p>
+<ul>
+<li>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</li>
+</ul>
+<p><strong>The data was collected in October 2018 by hundreds of volunteers and key NYC entities who tallied the squirrels in Central Park, New York on behalf of The Squirrel Census (the original data curator).</strong></p>
+<ul>
+<li>Write a brief description of the observations.</li>
+</ul>
+<p><strong>The observations include 3,023 squirrel sightings, unique squirrel IDs, dates spotted, location, age, primary and secondary fur color, elevation, squirrel activities when spotted (running, chasing, climbing, foraging, eating, or other), sounds, tail movement, and interactions between squirrels and with humans.</strong></p>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research question</h2>
 <ul>
 <li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
+</ul>
+<p><strong>Research question: What is the relationship between squirrel location, squirrel climbing, and whether the squirrel runs from human spotters?</strong></p>
+<ul>
 <li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
+</ul>
+<p><strong>Our hypothesis is that squirrels spotted on a ground plane will run from human spotters more than squirrels above ground, given the spotter is on their same elevation and thus constitutes a greater threat. Moreover, we hypothesize that squirrels climbing will run from human spotters more than squirrels above ground and more than squirrels spotted on a ground plane, given such squirrels might climb to escape the human.</strong></p>
+<ul>
 <li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
 </ul>
+<p><strong>All variables are categorical variables - climbing, location, runs from.</strong></p>
 </section>
 <section id="literature" class="level2">
 <h2 class="anchored" data-anchor-id="literature">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li>Find one published credible article on the topic you are interested in researching.</li>
 </ul>
+<p><strong>https://www.jstor.org/stable/3800817?seq=8</strong></p>
+<ul>
+<li>Provide a one paragraph summary about the article.</li>
+</ul>
+<p><strong>The article “Census Methods for Eastern Gray Squirrels” by Stephen H. Bouffard and Dale Hein examines the efficacy of various census methods for estimating squirrel populations in populated areas. The study found that visually counting squirrels can be an effective mechanism for estimating populations, although may leave other squirrels in less visible locations undetected. The study further analyzes the impact of various factors on squirrel visibility (such as weather conditions and food availability).</strong></p>
+<ul>
+<li>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</li>
+</ul>
+<p><strong>There is limited research on the variables which impact squirrel visibility. Our research question seeks to build upon this study’s research into the factors that influence squirrels’ propensity to venture into visible areas, specifically focusing on whether the presence of human spotters is a factor that influences squirrel visibility. If the presence of human spotters has a positive correlation with squirrels staying hidden or retreating, human presence may be an additional factor impacting squirrel visibility that ought be considered in future squirrel censuses.</strong></p>
 </section>
 <section id="glimpse-of-data" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Squirrels <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 3023 Columns: 31
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (14): Unique Squirrel ID, Hectare, Shift, Age, Primary Fur Color, Highli...
+dbl  (4): X, Y, Date, Hectare Squirrel Number
+lgl (13): Running, Chasing, Climbing, Eating, Foraging, Kuks, Quaas, Moans, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(Squirrels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 3,023
+Columns: 31
+$ X                                            &lt;dbl&gt; -73.95613, -73.96886, -73…
+$ Y                                            &lt;dbl&gt; 40.79408, 40.78378, 40.77…
+$ `Unique Squirrel ID`                         &lt;chr&gt; "37F-PM-1014-03", "21B-AM…
+$ Hectare                                      &lt;chr&gt; "37F", "21B", "11B", "32E…
+$ Shift                                        &lt;chr&gt; "PM", "AM", "PM", "PM", "…
+$ Date                                         &lt;dbl&gt; 10142018, 10192018, 10142…
+$ `Hectare Squirrel Number`                    &lt;dbl&gt; 3, 4, 8, 14, 5, 3, 2, 2, …
+$ Age                                          &lt;chr&gt; NA, NA, NA, "Adult", "Adu…
+$ `Primary Fur Color`                          &lt;chr&gt; NA, NA, "Gray", "Gray", "…
+$ `Highlight Fur Color`                        &lt;chr&gt; NA, NA, NA, NA, "Cinnamon…
+$ `Combination of Primary and Highlight Color` &lt;chr&gt; "+", "+", "Gray+", "Gray+…
+$ `Color notes`                                &lt;chr&gt; NA, NA, NA, "Nothing sele…
+$ Location                                     &lt;chr&gt; NA, NA, "Above Ground", N…
+$ `Above Ground Sighter Measurement`           &lt;chr&gt; NA, NA, "10", NA, NA, NA,…
+$ `Specific Location`                          &lt;chr&gt; NA, NA, NA, NA, "on tree …
+$ Running                                      &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Chasing                                      &lt;lgl&gt; FALSE, FALSE, TRUE, FALSE…
+$ Climbing                                     &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Eating                                       &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE…
+$ Foraging                                     &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE…
+$ `Other Activities`                           &lt;chr&gt; NA, NA, NA, NA, NA, NA, N…
+$ Kuks                                         &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Quaas                                        &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Moans                                        &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ `Tail flags`                                 &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ `Tail twitches`                              &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Approaches                                   &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Indifferent                                  &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ `Runs from`                                  &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE…
+$ `Other Interactions`                         &lt;chr&gt; NA, NA, NA, NA, NA, NA, N…
+$ `Lat/Long`                                   &lt;chr&gt; "POINT (-73.9561344937861…</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -258,31 +322,105 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction-and-data-1" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data-1">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li>Identify the source of the data.</li>
 </ul>
+<p><strong>This data is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle.</strong></p>
+<ul>
+<li>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</li>
+</ul>
+<p><strong>The data was scraped from <a href="http://barttorvik.com/trank.php#" class="uri">http://barttorvik.com/trank.php#</a>. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.</strong></p>
+<ul>
+<li>Write a brief description of the observations.</li>
+</ul>
+<p><strong>The dataset has various variables that characterize different Division I basketball teams— such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.</strong></p>
 </section>
 <section id="research-question-1" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-1">Research question</h2>
 <ul>
 <li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
+</ul>
+<p><u><strong>Research question</strong></u><strong>: Which Division 1 basketball conference has the highest success rate from the 2013-2019 season? (number of game wins, offensive rebound rates, total points, etc.). And which best factors (other than wins)(offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc) best predict regular season success (win percentage)(from 2013 to 2019)? And does this also predict (better predict?/ worse predict) post season success?</strong></p>
+<ul>
 <li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
+</ul>
+<p><strong>Our research topic will explore the different facets that are considered in possibly predicting the success of college DI basketball teams in 2013-2019. We hypothesize that the best predictors for regular season success (win percentage) will be offensive and defensive efficiency and it will also predict postseason success just as well.</strong></p>
+<ul>
 <li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
 </ul>
+<p><strong>Conference (categorical)</strong></p>
+<p><strong>Wins(quantitative)</strong></p>
+<p><strong>Losses(quantitative)</strong></p>
+<p><strong>Adjusted offensive rating(quantitative)</strong></p>
+<p><strong>Adjusted defensive rating(quantitative)</strong></p>
+<p><strong>3pt success rate (allowed and committed)(quantitative)</strong></p>
+<p><strong>2pt success rate (allowed and committed)(quantitative)</strong></p>
+<p><strong>Field goal success rate(quantitative)</strong></p>
+<p><strong>Effective field goal percentage (allowed and committed)(quantitative)</strong></p>
+<p><strong>Rebound and turnover rates (allowed and committed)(quantitative)</strong></p>
+<p><strong>How to calculate success</strong></p>
+<p><strong>Post season- How far they made it in March madness (not in tournament, round of 64, round of 32, sweet 16, elite 8, final 4, runner up, champions) (categorical)</strong></p>
+<p><strong>Regular season - Seed for the tournament (categorical) (easily changeable to quantitative ) and Win percentage (quantitative)</strong></p>
 </section>
 <section id="literature-1" class="level2">
 <h2 class="anchored" data-anchor-id="literature-1">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li><p>Find one published credible article on the topic you are interested in researching.</p>
+<ul>
+<li><a href="https://www.ncaa.com/news/basketball-men/article/2018-10-05/best-conferences-ncaa-tournament-play-1985" class="uri"><strong>https://www.ncaa.com/news/basketball-men/article/2018-10-05/best-conferences-ncaa-tournament-play-1985</strong></a></li>
+</ul></li>
+<li><p>Provide a one paragraph summary about the article.</p>
+<ul>
+<li><strong>This article looks at the success of conferences since the NCAA tournament was made into a 64 team format (now 68). With the ACC being largely in control statistically, they are the dominant post season&nbsp; conference (which is argued to be the best team predictor since in the tournament teams from the same conference rarely play each other). The ACC also has a winning record against 29 of the 32 conferences. The ACC is also the league’s only double digit champion (with 10 titles since 1985) and has the highest win percentage. (*This article is also reputable as it uses data directly from the NCAA and it written and researched by the NCAA)</strong></li>
+</ul></li>
+<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p>
+<ul>
+<li><strong>In our research question we wonder why this is the pattern. Our data should show this same pattern, but it should also suggest a predictor for this behavior as well. Why do some teams perform at a higher success and what are the variables that predict success?</strong>&nbsp;</li>
+</ul></li>
 </ul>
 </section>
 <section id="glimpse-of-data-1" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-1">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cbb <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/cbb.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 2455 Columns: 24
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (3): TEAM, CONF, POSTSEASON
+dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(cbb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,455
+Columns: 24
+$ TEAM       &lt;chr&gt; "North Carolina", "Wisconsin", "Michigan", "Texas Tech", "G…
+$ CONF       &lt;chr&gt; "ACC", "B10", "B10", "B12", "WCC", "SEC", "B10", "ACC", "AC…
+$ G          &lt;dbl&gt; 40, 40, 40, 38, 39, 40, 38, 39, 38, 39, 40, 40, 40, 40, 36,…
+$ W          &lt;dbl&gt; 33, 36, 33, 31, 37, 29, 30, 35, 35, 33, 35, 36, 32, 35, 27,…
+$ ADJOE      &lt;dbl&gt; 123.3, 129.1, 114.4, 115.2, 117.8, 117.2, 121.5, 125.2, 123…
+$ ADJDE      &lt;dbl&gt; 94.9, 93.6, 90.4, 85.2, 86.3, 96.2, 93.7, 90.6, 89.9, 91.5,…
+$ BARTHAG    &lt;dbl&gt; 0.9531, 0.9758, 0.9375, 0.9696, 0.9728, 0.9062, 0.9522, 0.9…
+$ EFG_O      &lt;dbl&gt; 52.6, 54.8, 53.9, 53.5, 56.6, 49.9, 54.6, 56.6, 55.2, 51.7,…
+$ EFG_D      &lt;dbl&gt; 48.1, 47.7, 47.7, 43.0, 41.1, 46.0, 48.0, 46.5, 44.7, 48.1,…
+$ TOR        &lt;dbl&gt; 15.4, 12.4, 14.0, 17.7, 16.2, 18.1, 14.6, 16.3, 14.7, 16.2,…
+$ TORD       &lt;dbl&gt; 18.2, 15.8, 19.5, 22.8, 17.1, 16.1, 18.7, 18.6, 17.5, 18.6,…
+$ ORB        &lt;dbl&gt; 40.7, 32.1, 25.5, 27.4, 30.0, 42.0, 32.5, 35.8, 30.4, 41.3,…
+$ DRB        &lt;dbl&gt; 30.0, 23.7, 24.9, 28.7, 26.2, 29.7, 29.4, 30.2, 25.4, 25.0,…
+$ FTR        &lt;dbl&gt; 32.3, 36.2, 30.7, 32.9, 39.0, 51.8, 28.4, 39.8, 29.1, 34.3,…
+$ FTRD       &lt;dbl&gt; 30.4, 22.4, 30.0, 36.6, 26.9, 36.8, 22.7, 23.9, 26.3, 31.6,…
+$ `2P_O`     &lt;dbl&gt; 53.9, 54.8, 54.7, 52.8, 56.3, 50.0, 53.4, 55.9, 52.5, 51.0,…
+$ `2P_D`     &lt;dbl&gt; 44.6, 44.7, 46.8, 41.9, 40.0, 44.9, 47.6, 46.3, 45.7, 46.3,…
+$ `3P_O`     &lt;dbl&gt; 32.7, 36.5, 35.2, 36.5, 38.2, 33.2, 37.9, 38.7, 39.5, 35.5,…
+$ `3P_D`     &lt;dbl&gt; 36.2, 37.5, 33.2, 29.7, 29.0, 32.2, 32.6, 31.4, 28.9, 33.9,…
+$ ADJ_T      &lt;dbl&gt; 71.7, 59.3, 65.9, 67.5, 71.5, 65.9, 64.8, 66.4, 60.7, 72.8,…
+$ WAB        &lt;dbl&gt; 8.6, 11.3, 6.9, 7.0, 7.7, 3.9, 6.2, 10.7, 11.1, 8.4, 8.9, 1…
+$ POSTSEASON &lt;chr&gt; "2ND", "2ND", "2ND", "2ND", "2ND", "2ND", "2ND", "Champions…
+$ SEED       &lt;dbl&gt; 1, 1, 3, 3, 1, 8, 4, 1, 1, 1, 2, 1, 7, 1, 4, 3, 6, 1, 2, 9,…
+$ YEAR       &lt;dbl&gt; 2016, 2015, 2018, 2019, 2017, 2014, 2013, 2015, 2019, 2017,…</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -291,31 +429,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction-and-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data-2">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li>Identify the source of the data.</li>
 </ul>
+<p><strong>This specific data set was found on data world.</strong></p>
+<p><strong>https://data.world/publicsafety/people-killed-by-police-in-us</strong></p>
+<ul>
+<li>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</li>
+</ul>
+<p><strong>The data is from the Guardian and verified crowdsourcing from the Guardian that looks at deaths caused by police in 2016 with the purpose of monitoring demographics to tell the stories of how people died. The data is ever changing (with new information) and this data set was downloaded March 10th, 2023.</strong></p>
+<ul>
+<li>Write a brief description of the observations.</li>
+</ul>
+<p><strong>The observations look at the names, age, gender, ethnicity of the victims, if they were armed, where they were killed, and which agency they were killed by (Ex. which police station was the officer based in).</strong></p>
 </section>
 <section id="research-question-2" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-2">Research question</h2>
 <ul>
 <li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
+</ul>
+<p><strong>Which groups are more likely to be killed by police while looking at gender, armed status, race, and location?</strong></p>
+<ul>
 <li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
+</ul>
+<p><strong>This topic will look at which groups are more likely to be victims of 2016 deadly police violence. We will examine gender with regards to deadly police force, race, and also location by state. We hope this may be able to help us realize which areas in the country and which biases we should focus on first when solving the problem of deadly police force. We hypothesize that males, younger people, black people, and those from states with the highest population will be victims the most of deadly police force.</strong></p>
+<ul>
 <li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
 </ul>
+<p><strong>Gender (categorical) Age (quantitative) Race (categorical) City (categorical) State (categorical) Armed (if they were how were they armed) (categorical)</strong></p>
 </section>
 <section id="literature-2" class="level2">
 <h2 class="anchored" data-anchor-id="literature-2">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li>Find one published credible article on the topic you are interested in researching.</li>
 </ul>
+<p><strong>https://spssi.onlinelibrary.wiley.com/doi/full/10.1111/josi.12246?casa_token=uEDJeuc8b5wAAAAA%3A76_aPEqicnTsh_5r_urafVPnuZwbcxp4qsjW40HhhYge0Yu62iYY5kL-hYMZ9rxFxi3QFOZV4Pk</strong></p>
+<ul>
+<li>Provide a one paragraph summary about the article.</li>
+</ul>
+<p><strong>This article looks at police caused deaths and also the death of on duty/ off duty police officers that were mistaken to not be officers. It goes into detail of how race has a difference in statistics. More white people are killed when armed vs unarmed while black people are killed more when unarmed vs armed. Black people in 2015 and 2016 also are killed more as a percentage of unarmed people killed. It then goes on to say that off duty officers who are black are more likely to get killed than white officers by police violence. Next it looks into the psychology of this effect looking at things such as misinformation, weapon perception and shooter bias.</strong></p>
+<ul>
+<li>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</li>
+</ul>
+<p><strong>This builds on our question because it looks at race and armed status, but we will build on this by looking at specific locations as well as gender as well.</strong></p>
 </section>
 <section id="glimpse-of-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-2">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>the_counted_2016 <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"data/the-counted-2016.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 1035 Columns: 14
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (11): name, age, gender, raceethnicity, month, streetaddress, city, stat...
+dbl  (3): uid, day, year
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(the_counted_2016)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,035
+Columns: 14
+$ uid                  &lt;dbl&gt; 20161, 20162, 20163, 20164, 20165, 20166, 20167, …
+$ name                 &lt;chr&gt; "Joshua Sisson", "Germonta Wallace", "Sean O'Brie…
+$ age                  &lt;chr&gt; "30", "30", "37", "22", "27", "54", "29", "52", "…
+$ gender               &lt;chr&gt; "Male", "Male", "Male", "Male", "Male", "Male", "…
+$ raceethnicity        &lt;chr&gt; "White", "Black", "White", "Black", "Black", "Whi…
+$ month                &lt;chr&gt; "January", "January", "January", "January", "Janu…
+$ day                  &lt;dbl&gt; 1, 3, 2, 4, 4, 5, 5, 5, 6, 5, 5, 7, 7, 9, 10, 8, …
+$ year                 &lt;dbl&gt; 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2016, 2…
+$ streetaddress        &lt;chr&gt; "4200 6th Ave", "2600 Watson Dr", "100 Washington…
+$ city                 &lt;chr&gt; "San Diego", "Charlotte", "Livingston", "Oklahoma…
+$ state                &lt;chr&gt; "CA", "NC", "MT", "OK", "LA", "PA", "WA", "CA", "…
+$ classification       &lt;chr&gt; "Gunshot", "Gunshot", "Gunshot", "Gunshot", "Guns…
+$ lawenforcementagency &lt;chr&gt; "San Diego Police Department", "Charlotte-Mecklen…
+$ armed                &lt;chr&gt; "Knife", "Firearm", "Knife", "Firearm", "Unknown"…</code></pre>
+</div>
 </div>
 
 
@@ -392,7 +581,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

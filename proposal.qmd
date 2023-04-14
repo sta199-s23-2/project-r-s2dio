@@ -144,6 +144,7 @@ glimpse(Squirrels)
 ```{r}
 #| label: load-data-2
 
+cbb <- read_csv("data/cbb.csv")
 glimpse(cbb)
 ```
 
@@ -198,6 +199,7 @@ glimpse(cbb)
 ```{r}
 #| label: load-data-3
 
+the_counted_2016 <-read_csv("data/the-counted-2016.csv")
 glimpse(the_counted_2016)
 
 ```
