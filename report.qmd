@@ -30,11 +30,15 @@ The dataset has various variables that characterize different Division I basketb
 
 **Methodology**
 
+<<<<<<< HEAD
+**Our research question: "Which Division 1 basketball conference has the highest overall success rate from the 2013-2019 seasons? And which best factors (other than wins)--- (offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc)--- best predict overall regular season success from 2013 to 2019? And does this also predict (better predict/ worse predict) post season success?"**
+=======
 -- How do you plan to answer your research question?
 
 -- Prediction? Inference? Both?
 
 **Our research question: "How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?"**
+>>>>>>> 6203880cdb58fcd68a00f6e9c2d426b454f7eb9b
 
 Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
 
@@ -43,8 +47,8 @@ We predict that the conference with the most programs ranked highly will be cons
 **Results**
 
 -- What are you finding out?
+We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
--- Make sure that this is connected to your research question. It is easy to get excited and explore your data set. Make sure that all results you generate are in-line with the research question you have asked
 
 ```{r}
 cbb_new <- cbb |>
