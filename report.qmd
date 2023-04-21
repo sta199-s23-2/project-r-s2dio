@@ -47,10 +47,6 @@ Our central research question is addressed through the analysis of the factors t
 -- What are you finding out? We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
 ```{r}
-<<<<<<< HEAD
-
-=======
->>>>>>> 9094c6d864be8f02cd99bbb60cb2095e2b126ec9
 #| label: rename-cbb
 #| label: loading_in_data
 
