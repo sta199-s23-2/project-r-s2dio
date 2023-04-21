@@ -32,12 +32,6 @@ The dataset has various variables that characterize different Division I basketb
 
 **Methodology**
 
-**Our research question: "Which Division 1 basketball conference has the highest overall success rate from the 2013-2019 seasons? And which best factors (other than wins)--- (offensive/ defensive efficiency, 2pt and 3pt field goal success, steal rate, turnover rate, etc)--- best predict overall regular season success from 2013 to 2019? And does this also predict (better predict/ worse predict) post season success?"**
-
--- How do you plan to answer your research question?
-
--- Prediction? Inference? Both?
-
 **Our research question: "How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?"**
 
 Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
@@ -55,6 +49,7 @@ cbb_new <- cbb |>
 ```
 
 Plotting The Data
+
 ```{r}
 #| label: visualization
 
@@ -69,7 +64,9 @@ cbb |>
   geom_point()
 
 ```
+
 Fitting Our Models
+
 ```{r}
 #| lable: linear-reg
 #| label: Fitting_models
@@ -105,6 +102,7 @@ Model3 (predicting seed based on adjusted offensive and defensive efficiency)
 $\widehat{SEED} = -183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
 
 Finding Adjusted R-Squared
+
 ```{r}
 #| label: Adjusted_R_Squared
 
@@ -132,8 +130,8 @@ SEED_Model_3
 
 ```
 
-
 Finding AIC (Akaike Information Criterion)
+
 ```{r}
 #| label: AIC
 
