@@ -54,6 +54,7 @@ cbb_new <- cbb |>
   rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
 
+Plotting The Data
 ```{r}
 #| label: visualization
 
@@ -68,7 +69,7 @@ cbb |>
   geom_point()
 
 ```
-
+Fitting Our Models
 ```{r}
 #| lable: linear-reg
 #| label: Fitting_models
@@ -103,6 +104,7 @@ Model3 (predicting seed based on adjusted offensive and defensive efficiency)
 
 $\widehat{SEED} = -183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
 
+Finding Adjusted R-Squared
 ```{r}
 #| label: Adjusted_R_Squared
 
@@ -130,6 +132,8 @@ SEED_Model_3
 
 ```
 
+
+Finding AIC (Akaike Information Criterion)
 ```{r}
 #| label: AIC
 
