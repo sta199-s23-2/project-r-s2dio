@@ -9,12 +9,14 @@ execute:
 
 ```{r}
 #| label: load-packages
-#| message: false
+
 library(tidyverse)
 library(tidymodels)
 ```
 
 ```{r}
+#| label: read-csv
+
 cbb <- read_csv("data/cbb.csv")
 ```
 
@@ -45,6 +47,7 @@ Our central research question is addressed through the analysis of the factors t
 -- What are you finding out? We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
 ```{r}
+#| label: rename-cbb
 #| label: loading_in_data
 
 cbb_new <- cbb |>
@@ -52,6 +55,8 @@ cbb_new <- cbb |>
 ```
 
 ```{r}
+#| label: visualization
+
 cbb |>
   ggplot(aes(x = ADJOE,
              y = SEED)) +
@@ -65,8 +70,8 @@ cbb |>
 ```
 
 ```{r}
+#| lable: linear-reg
 #| label: Fitting_models
-
 
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
