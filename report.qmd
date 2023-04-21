@@ -42,14 +42,17 @@ The dataset has various variables that characterize different Division I basketb
 
 Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
 
-We predict that the conference with the most programs ranked highly will be considered the D1 mens basketball conference with the highest overall success rate. We also predict that an individual program will be ranked higher by the number of points they scored, in relation to their opponent, regardless of the outcome.
-
 **Results**
 
 -- What are you finding out? We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
 ```{r}
+<<<<<<< HEAD
 #| label: rename-cbb
+=======
+#| label: loading_in_data
+
+>>>>>>> b25eaf9cf8d01e59b9d8277b9bd80b28a0b13c97
 cbb_new <- cbb |>
   rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
@@ -58,19 +61,24 @@ cbb_new <- cbb |>
 #| label: visualization
 
 cbb |>
-  ggplot(aes(x = SEED,
-             y = ADJOE)) +
+  ggplot(aes(x = ADJOE,
+             y = SEED)) +
   geom_point()
 
 cbb |>
-  ggplot(aes(x = SEED,
-             y = ADJDE)) +
+  ggplot(aes(x = ADJDE,
+             y = SEED)) +
   geom_point()
 
 ```
 
 ```{r}
+<<<<<<< HEAD
 #| lable: linear-reg
+=======
+#| label: Fitting_models
+
+>>>>>>> b25eaf9cf8d01e59b9d8277b9bd80b28a0b13c97
 
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
@@ -103,6 +111,7 @@ Model3 (predicting seed based on adjusted offensive and defensive efficiency)
 $\widehat{SEED} = -183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
 
 ```{r}
+#| label: Adjusted_R_Squared
 
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
@@ -128,4 +137,31 @@ SEED_Model_3
 
 ```
 
-The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value. Adjusted offensive efficiency is the second best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed.
+```{r}
+#| label: AIC
+
+SEED_Model_1 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE, data = cbb) |>
+  glance() |>
+  pull(AIC)
+
+SEED_Model_2 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJDE, data = cbb) |>
+  glance() |>
+  pull(AIC)
+
+SEED_Model_3 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE * ADJDE, data = cbb) |>
+  glance() |>
+  pull(AIC)
+
+SEED_Model_1
+SEED_Model_2
+SEED_Model_3
+
+```
+
+The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value. Adjusted offensive efficiency is the second best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predicted that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency were likelier to be 1-seed teams and make later playoff rounds."
