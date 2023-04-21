@@ -1,5 +1,5 @@
 ---
-title: "Project title"
+title: "Project R-S2dio - College Basketball"
 subtitle: "Report"
 format: html
 editor: visual
