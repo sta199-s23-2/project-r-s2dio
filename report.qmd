@@ -56,12 +56,20 @@ Plotting The Data
 cbb |>
   ggplot(aes(x = ADJOE,
              y = SEED)) +
-  geom_point()
+  geom_point() +
+  labs(x = "Adjusted Offensve Efficiency", y = "Seed",
+       title = 
+         "Relationship Between Adjusted 
+       Offensive Efficiency and Seed")
 
 cbb |>
   ggplot(aes(x = ADJDE,
              y = SEED)) +
-  geom_point()
+  geom_point() +
+  labs(x = "Adjusted Defensive Efficiency", y = "Seed",
+       title = 
+         "Relationship Between Adjusted 
+       Defensive Efficiency and Seed")
 
 ```
 
