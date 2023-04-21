@@ -47,12 +47,9 @@ Our central research question is addressed through the analysis of the factors t
 -- What are you finding out? We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
 ```{r}
-<<<<<<< HEAD
 #| label: rename-cbb
-=======
 #| label: loading_in_data
 
->>>>>>> b25eaf9cf8d01e59b9d8277b9bd80b28a0b13c97
 cbb_new <- cbb |>
   rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
@@ -73,12 +70,8 @@ cbb |>
 ```
 
 ```{r}
-<<<<<<< HEAD
 #| lable: linear-reg
-=======
 #| label: Fitting_models
-
->>>>>>> b25eaf9cf8d01e59b9d8277b9bd80b28a0b13c97
 
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
