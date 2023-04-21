@@ -9,12 +9,14 @@ execute:
 
 ```{r}
 #| label: load-packages
-#| message: false
+
 library(tidyverse)
 library(tidymodels)
 ```
 
 ```{r}
+#| label: read-csv
+
 cbb <- read_csv("data/cbb.csv")
 ```
 
@@ -47,11 +49,14 @@ We predict that the conference with the most programs ranked highly will be cons
 -- What are you finding out? We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
 ```{r}
+#| label: rename-cbb
 cbb_new <- cbb |>
   rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
 
 ```{r}
+#| label: visualization
+
 cbb |>
   ggplot(aes(x = SEED,
              y = ADJOE)) +
@@ -65,6 +70,7 @@ cbb |>
 ```
 
 ```{r}
+#| lable: linear-reg
 
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
