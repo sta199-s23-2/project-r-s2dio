@@ -53,11 +53,10 @@ Plotting The Data
 #| label: visualization
 
 cbb |>
-<<<<<<< HEAD
   ggplot(aes(y = SEED,
              x = ADJOE)) +
   geom_point()
-=======
+
   ggplot(aes(x = ADJOE,
              y = SEED)) +
   geom_point() +
@@ -65,7 +64,7 @@ cbb |>
        title = 
          "Relationship Between Adjusted 
        Offensive Efficiency and Seed")
->>>>>>> 39bf354912012f9cca13d6a78c1f0f2f7df97b29
+
 
 cbb |>
   ggplot(aes(x = ADJDE,
