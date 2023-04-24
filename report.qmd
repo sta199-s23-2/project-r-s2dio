@@ -54,8 +54,8 @@ Plotting The Data
 #| label: visualization
 
 cbb |>
-  ggplot(aes(x = ADJOE,
-             y = SEED)) +
+  ggplot(aes(y = SEED,
+             x = ADJOE)) +
   geom_point()
 
 cbb |>
