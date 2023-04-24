@@ -42,7 +42,6 @@ Our central research question is addressed through the analysis of the factors t
 
 ```{r}
 #| label: rename-cbb
-#| label: loading_in_data
 
 cbb_new <- cbb |>
   rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
@@ -77,7 +76,6 @@ Fitting Our Models
 
 ```{r}
 #| lable: linear-reg
-#| label: Fitting_models
 
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
@@ -112,7 +110,7 @@ $\widehat{SEED} = -183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
 Finding Adjusted R-Squared
 
 ```{r}
-#| label: Adjusted_R_Squared
+#| label: Adjusted-R-Squared
 
 SEED_Model_1 <- linear_reg() |>
   set_engine("lm") |>
