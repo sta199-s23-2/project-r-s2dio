@@ -45,7 +45,8 @@ Our central research question is addressed through the analysis of the factors t
 
 cbb_new <- cbb |>
   mutate("Total Efficiency" = ADJOE - ADJDE) |>
-  rename("Adjusted Offensive Efficiency" = "ADJOE", "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
+  rename("Adjusted Offensive Efficiency" = "ADJOE",
+    "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
 
 Plotting The Data
