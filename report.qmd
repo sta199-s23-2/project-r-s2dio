@@ -99,9 +99,14 @@ SEED_Model_3 <- linear_reg() |>
   set_engine("lm") |>
   fit(SEED ~ ADJOE * ADJDE, data = cbb)
 
+SEED_Model_4 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ `Total Efficiency`, data = cbb_new)
+
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
+SEED_Model_4
 
 ```
 
@@ -140,9 +145,16 @@ SEED_Model_3 <- linear_reg() |>
   glance() |>
   pull(adj.r.squared)
 
+SEED_Model_4 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ `Total Efficiency`, data = cbb_new)|>
+  glance() |>
+  pull(adj.r.squared)
+
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
+SEED_Model_4
 
 ```
 
@@ -169,9 +181,16 @@ SEED_Model_3 <- linear_reg() |>
   glance() |>
   pull(AIC)
 
+SEED_Model_4 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ `Total Efficiency`, data = cbb_new)|>
+  glance() |>
+  pull(AIC)
+
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
+SEED_Model_4
 
 ```
 
