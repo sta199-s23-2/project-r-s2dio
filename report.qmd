@@ -45,6 +45,7 @@ Our central research question is addressed through the analysis of the factors t
 
 cbb_new <- cbb |>
   mutate("Total Efficiency" = ADJOE - ADJDE) |>
+  filter(SEED != "NA") |>
   rename("Adjusted Offensive Efficiency" = "ADJOE",
     "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
@@ -80,6 +81,17 @@ cbb_new |>
   labs(x = "Total Efficiency (Offensive - Defensive)", y = "Seed",
        title = 
          "Relationship Between Total Efficiency and Seed")
+
+#another way to look at the data (not for linear regression)
+cbb_new |>
+  ggplot(
+    aes(x = `Adjusted Offensive Efficiency`,
+             y = ADJDE, color = SEED)
+         ) +
+  geom_point() +
+  labs(x = "Adjusted Offensive Efficiency", y = "Adjusted Defensive Efficiency",
+       title = "Adjusted Offensive Efficiency, Adjusted Defensive Efficiency
+       and End of Regular Season Seed")
 
 ```
 
