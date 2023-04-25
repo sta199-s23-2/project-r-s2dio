@@ -91,7 +91,17 @@ cbb_new |>
   geom_point() +
   labs(x = "Adjusted Offensive Efficiency", y = "Adjusted Defensive Efficiency",
        title = "Adjusted Offensive Efficiency, Adjusted Defensive Efficiency
-       and End of Regular Season Seed")
+       and End of Regular Season Seed") 
+
+cbb_new |>
+  ggplot(
+    aes(x = `Adjusted Offensive Efficiency`,
+             y = ADJDE, color = SEED)
+         ) +
+  geom_point(size = 20, alpha = .20) +
+  labs(x = "Adjusted Offensive Efficiency", y = "Adjusted Defensive Efficiency",
+       title = "Adjusted Offensive Efficiency, Adjusted Defensive Efficiency
+       and End of Regular Season Seed") 
 
 ```
 
