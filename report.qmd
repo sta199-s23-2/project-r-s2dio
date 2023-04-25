@@ -74,13 +74,6 @@ cbb |>
          "Relationship Between Adjusted 
        Defensive Efficiency and Seed")
 
-cbb_new |>
-  ggplot(aes(x = `Total Efficiency`,
-             y = SEED)) +
-  geom_point() +
-  labs(x = "Total Efficiency (Offensive - Defensive)", y = "Seed",
-       title = 
-         "Relationship Between Total Efficiency and Seed")
 
 #another way to look at the data (not for linear regression)
 cbb_new |>
@@ -122,14 +115,11 @@ SEED_Model_3 <- linear_reg() |>
   set_engine("lm") |>
   fit(SEED ~ ADJOE * ADJDE, data = cbb)
 
-SEED_Model_4 <- linear_reg() |>
-  set_engine("lm") |>
-  fit(SEED ~ `Total Efficiency`, data = cbb_new)
 
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
-SEED_Model_4
+
 
 ```
 
@@ -143,7 +133,7 @@ $\widehat{SEED} = -49.52 + 0.60*ADJDE$
 
 Model3 (predicting seed based on adjusted offensive and defensive efficiency)
 
-$\widehat{SEED} = -183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
+$\widehat{SEED} = 183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
 
 Finding Adjusted R-Squared
 
@@ -168,17 +158,9 @@ SEED_Model_3 <- linear_reg() |>
   glance() |>
   pull(adj.r.squared)
 
-SEED_Model_4 <- linear_reg() |>
-  set_engine("lm") |>
-  fit(SEED ~ `Total Efficiency`, data = cbb_new)|>
-  glance() |>
-  pull(adj.r.squared)
-
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
-SEED_Model_4
-
 ```
 
 Finding AIC (Akaike Information Criterion)
@@ -204,16 +186,10 @@ SEED_Model_3 <- linear_reg() |>
   glance() |>
   pull(AIC)
 
-SEED_Model_4 <- linear_reg() |>
-  set_engine("lm") |>
-  fit(SEED ~ `Total Efficiency`, data = cbb_new)|>
-  glance() |>
-  pull(AIC)
 
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
-SEED_Model_4
 
 ```
 
