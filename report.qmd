@@ -4,11 +4,12 @@ subtitle: "Report"
 format: html
 editor: visual
 execute:
-  echo: true
+  echo: false
 ---
 
 ```{r}
 #| label: load-packages
+#| message: false
 
 library(tidyverse)
 library(tidymodels)
