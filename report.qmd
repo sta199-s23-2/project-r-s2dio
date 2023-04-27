@@ -88,16 +88,6 @@ cbb_new |>
        title = "Adjusted Offensive Efficiency, Adjusted Defensive Efficiency
        and End of Regular Season Seed") 
 
-cbb_new |>
-  ggplot(
-    aes(x = `Adjusted Offensive Efficiency`,
-             y = ADJDE, color = SEED)
-         ) +
-  geom_point(size = 20, alpha = .20) +
-  labs(x = "Adjusted Offensive Efficiency", y = "Adjusted Defensive Efficiency",
-       title = "Adjusted Offensive Efficiency, Adjusted Defensive Efficiency
-       and End of Regular Season Seed") 
-
 ```
 
 Fitting Our Models
@@ -216,4 +206,4 @@ SEED_Model_4
 
 ```
 
-The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predicted that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency were likelier to be 1-seed teams and make later playoff rounds."
+The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predict that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency will be predicted to have higher seeds."
