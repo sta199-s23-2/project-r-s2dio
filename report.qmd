@@ -117,10 +117,14 @@ SEED_Model_3 <- linear_reg() |>
   set_engine("lm") |>
   fit(SEED ~ ADJOE * ADJDE, data = cbb)
 
+SEED_Model_4 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE + ADJDE, data = cbb)
 
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
+SEED_Model_4
 
 
 ```
@@ -133,9 +137,13 @@ Model2 (predicting seed based on adjusted defensive efficiency)
 
 $\widehat{SEED} = -49.52 + 0.60*ADJDE$
 
-Model3 (predicting seed based on adjusted offensive and defensive efficiency)
+Model3 (predicting seed based on adjusted offensive and defensive efficiency [interactive model])
 
 $\widehat{SEED} = 183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
+
+Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])
+
+$\widehat{SEED} = 13.6156 - 0.43*ADJOE + 0.45*ADJDE$
 
 Finding Adjusted R-Squared
 
@@ -160,9 +168,16 @@ SEED_Model_3 <- linear_reg() |>
   glance() |>
   pull(adj.r.squared)
 
+SEED_Model_4 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE + ADJDE, data = cbb) |>
+  glance() |>
+  pull(adj.r.squared)
+
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
+SEED_Model_4
 ```
 
 Finding AIC (Akaike Information Criterion)
@@ -188,11 +203,17 @@ SEED_Model_3 <- linear_reg() |>
   glance() |>
   pull(AIC)
 
+SEED_Model_4 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(SEED ~ ADJOE + ADJDE, data = cbb) |>
+  glance() |>
+  pull(AIC)
 
 SEED_Model_1
 SEED_Model_2
 SEED_Model_3
+SEED_Model_4
 
 ```
 
-The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value. Adjusted offensive efficiency is the second best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predicted that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency were likelier to be 1-seed teams and make later playoff rounds."
+The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predicted that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency were likelier to be 1-seed teams and make later playoff rounds."
