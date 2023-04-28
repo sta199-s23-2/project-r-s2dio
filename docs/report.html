@@ -150,7 +150,7 @@ dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
 <div class="cell">
 
 </div>
-<p>Plotting The Data</p>
+<p><strong>Plotting The Data</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/visualization-1.png" class="img-fluid" width="672"></p>
@@ -162,7 +162,7 @@ dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
 <p><img src="report_files/figure-html/visualization-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Fitting Our Models</p>
+<p><strong>Fitting Our Models</strong></p>
 <div class="cell" data-lable="linear-reg">
 <div class="cell-output cell-output-stdout">
 <pre><code>parsnip model object
@@ -217,32 +217,58 @@ Coefficients:
 <p><span class="math inline">\(\widehat{SEED} = 183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE\)</span></p>
 <p>Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])</p>
 <p><span class="math inline">\(\widehat{SEED} = 13.6156 - 0.43*ADJOE + 0.45*ADJDE\)</span></p>
-<p>Finding Adjusted R-Squared</p>
+<p><strong>Finding Adjusted R-Squared</strong></p>
+<div class="cell">
+
+</div>
+<p>Model1 (predicting seed based on adjusted offensive efficiency)</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5544491</code></pre>
 </div>
+</div>
+<p>Model2 (predicting seed based on adjusted defensive efficiency)</p>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4853405</code></pre>
 </div>
+</div>
+<p>Model3 (predicting seed based on adjusted offensive and defensive efficiency [interactive model])</p>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8094014</code></pre>
 </div>
+</div>
+<p>Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])</p>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7978154</code></pre>
 </div>
 </div>
-<p>Finding AIC (Akaike Information Criterion)</p>
+<p><strong>Finding AIC (Akaike Information Criterion)</strong></p>
+<div class="cell">
+
+</div>
+<p>Model1 (predicting seed based on adjusted offensive efficiency)</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2438.484</code></pre>
 </div>
+</div>
+<p>Model2 (predicting seed based on adjusted defensive efficiency)</p>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2507.12</code></pre>
 </div>
+</div>
+<p>Model3 (predicting seed based on adjusted offensive and defensive efficiency [interactive model])</p>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2036.28</code></pre>
 </div>
+</div>
+<p>Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])</p>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2063.377</code></pre>
 </div>

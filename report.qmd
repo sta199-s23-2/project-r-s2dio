@@ -51,7 +51,7 @@ cbb_new <- cbb |>
     "Effective Field Goal" = "EFG_O", "Wins Above Bubble" = "WAB")
 ```
 
-Plotting The Data
+**Plotting The Data**
 
 ```{r}
 #| label: visualization
@@ -90,7 +90,7 @@ cbb_new |>
 
 ```
 
-Fitting Our Models
+**Fitting Our Models**
 
 ```{r}
 #| lable: linear-reg
@@ -135,7 +135,10 @@ Model4 (predicting seed based on adjusted offensive and defensive efficiency [ad
 
 $\widehat{SEED} = 13.6156 - 0.43*ADJOE + 0.45*ADJDE$
 
-Finding Adjusted R-Squared
+
+
+
+**Finding Adjusted R-Squared**
 
 ```{r}
 #| label: Adjusted-R-Squared
@@ -194,7 +197,10 @@ SEED_Model_4
 ```
 
 
-Finding AIC (Akaike Information Criterion)
+
+
+
+**Finding AIC (Akaike Information Criterion)**
 
 ```{r}
 #| label: AIC
