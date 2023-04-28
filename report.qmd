@@ -32,7 +32,11 @@ The data that we will be utilizing is sourced from the Division I college basket
 The dataset has various variables that characterize different Division I basketball teams--- such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.
 
 **Literature Review**
+In recent years, statistical analysis has become a critical tool for analyzing and predicting college basketball outcomes, with many researchers evaluating the relationship between offensive/defensive ratings and the performance of various basketball programs using statistical models.
 
+Studies have revealed that offensive and defensive ratings play a significant role in a team's success in the NCAA tournament. According to an NCAA study conducted in 2018, over nine seasons, a team's offensive rating was about 50% more critical than its defensive rating in terms of NCAA tournament success. Another study by Bleacher Report in 2013 showed that between 2003-2013, 35 out of 40 Final Four contestants were in the top 25 in defensive efficiency, while 33 out of 40 were in the top 25 in offensive efficiency, suggesting that teams with strong defensive and offensive ratings have a higher chance of reaching the Final Four in the NCAA tournament. The most comprehensive study conducted by Albert and Bennett in 2014 examined the historical performance of NCAA men's basketball tournament teams from 1985 to 2013 using logistic regression models, concluding that defensive performance is a significant predictor of a team's success in the overall tournament.
+
+Yet, while these studies and a number of others have centered around predicting the impact of offensive/defensive rating on overall tournament success, we found that very minimal research or statistical models exist analyzing the relationship between these ratings and SEED prior to the tournament, inspiring our research question and hypothesis.
 
 
 **Methodology**
