@@ -31,6 +31,10 @@ The data that we will be utilizing is sourced from the Division I college basket
 
 The dataset has various variables that characterize different Division I basketball teams--- such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.
 
+**Literature Review**
+
+
+
 **Methodology**
 
 **Our research question: "How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?"**
