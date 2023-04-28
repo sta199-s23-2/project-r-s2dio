@@ -164,11 +164,35 @@ SEED_Model_4 <- linear_reg() |>
   glance() |>
   pull(adj.r.squared)
 
+```
+Model1 (predicting seed based on adjusted offensive efficiency)
+```{r}
+#| label: Model-1-Adjusted-R-Squared
+
 SEED_Model_1
+```
+
+Model2 (predicting seed based on adjusted defensive efficiency)
+```{r}
+#| label: Model-2-Adjusted-R-Squared
+
 SEED_Model_2
+```
+
+Model3 (predicting seed based on adjusted offensive and defensive efficiency [interactive model])
+```{r}
+#| label: Model-3-Adjusted-R-Squared
+
 SEED_Model_3
+```
+
+Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])
+```{r}
+#| label: Model-4-Adjusted-R-Squared
+
 SEED_Model_4
 ```
+
 
 Finding AIC (Akaike Information Criterion)
 
@@ -199,11 +223,35 @@ SEED_Model_4 <- linear_reg() |>
   glance() |>
   pull(AIC)
 
-SEED_Model_1
-SEED_Model_2
-SEED_Model_3
-SEED_Model_4
-
 ```
+
+Model1 (predicting seed based on adjusted offensive efficiency)
+```{r}
+#| label: Model-1-AIC
+
+SEED_Model_1
+```
+
+Model2 (predicting seed based on adjusted defensive efficiency)
+```{r}
+#| label: Model-2-AIC
+
+SEED_Model_2
+```
+
+Model3 (predicting seed based on adjusted offensive and defensive efficiency [interactive model])
+```{r}
+#| label: Model-3-AIC
+
+SEED_Model_3
+```
+
+Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])
+```{r}
+#| label: Model-4-AIC
+
+SEED_Model_4
+```
+
 
 The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predict that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency will be predicted to have higher seeds."

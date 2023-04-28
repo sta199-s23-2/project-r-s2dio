@@ -144,9 +144,9 @@ dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
 <p>The dataset has various variables that characterize different Division I basketball teams— such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.</p>
 <p><strong>Methodology</strong></p>
 <p><strong>Our research question: “How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?”</strong></p>
-<p>Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program’s success and determine their ‘weight’ in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.</p>
+<p>Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program’s success and determine their ‘weight’ in assigning regular season rankings. With this we hoe to find teh best predictor for end of regular season seed given the team makes the ncaa tournament (or if the predicted seed is above 16 then they do not make the tournament).</p>
 <p><strong>Results</strong></p>
-<p>– What are you finding out? We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).</p>
+<p>– What are you finding out? We are finding out the best correlation between seeds and adjusted offensive efficiency/ adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).</p>
 <div class="cell">
 
 </div>
@@ -160,9 +160,6 @@ dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
 </div>
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/visualization-3.png" class="img-fluid" width="672"></p>
-</div>
-<div class="cell-output-display">
-<p><img src="report_files/figure-html/visualization-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Fitting Our Models</p>
@@ -200,13 +197,26 @@ Coefficients:
 (Intercept)        ADJOE        ADJDE  ADJOE:ADJDE  
   183.58562     -1.98010     -1.29158      0.01587  </code></pre>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code>parsnip model object
+
+
+Call:
+stats::lm(formula = SEED ~ ADJOE + ADJDE, data = data)
+
+Coefficients:
+(Intercept)        ADJOE        ADJDE  
+    13.6156      -0.4317       0.4482  </code></pre>
+</div>
 </div>
 <p>Model1 (predicting seed based on adjusted offensive efficiency)</p>
 <p><span class="math inline">\(\widehat{SEED} = 69.90 - 0.55*ADJOE\)</span></p>
 <p>Model2 (predicting seed based on adjusted defensive efficiency)</p>
 <p><span class="math inline">\(\widehat{SEED} = -49.52 + 0.60*ADJDE\)</span></p>
-<p>Model3 (predicting seed based on adjusted offensive and defensive efficiency)</p>
+<p>Model3 (predicting seed based on adjusted offensive and defensive efficiency [interactive model])</p>
 <p><span class="math inline">\(\widehat{SEED} = 183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE\)</span></p>
+<p>Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])</p>
+<p><span class="math inline">\(\widehat{SEED} = 13.6156 - 0.43*ADJOE + 0.45*ADJDE\)</span></p>
 <p>Finding Adjusted R-Squared</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -217,6 +227,9 @@ Coefficients:
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8094014</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7978154</code></pre>
 </div>
 </div>
 <p>Finding AIC (Akaike Information Criterion)</p>
@@ -230,8 +243,11 @@ Coefficients:
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2036.28</code></pre>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2063.377</code></pre>
 </div>
-<p>The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value. Adjusted offensive efficiency is the second best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is “We predicted that, in regular season, teams with higher adjusted offensive efficiency &amp; lower adjusted defensive efficiency were likelier to be 1-seed teams and make later playoff rounds.”</p>
+</div>
+<p>The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is “We predict that, in regular season, teams with higher adjusted offensive efficiency &amp; lower adjusted defensive efficiency will be predicted to have higher seeds.”</p>
 
 
 
