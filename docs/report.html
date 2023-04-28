@@ -142,9 +142,31 @@ dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
 <p>As Duke students, it goes without saying that Duke basketball adds on to our unique college experience. Noting Duke mens basketball’s historical successes, we have grown interested in researching more about other Division 1 mens basketball programs in universities throughout the country.</p>
 <p>The data that we will be utilizing is sourced from the Division I college basketball seasons from the years of 2013-2019. It was found in the open source data site, Kaggle. The data was scraped from http://barttorvik.com/trank.php#. This data was cleaned up in 2021, in which the COVID seasons were not included in the dataset.</p>
 <p>The dataset has various variables that characterize different Division I basketball teams— such as the university they represent and the conference in which they belong. Some of the observations within the dataset include the number of games played, the number of games won, power rating, as well as the stats of the team in a particular season.</p>
-<p><strong>Methodology</strong></p>
+<p><strong>Literature Review</strong></p>
+<p><strong>Methodology</strong> In this project, we decided to fit multiple models and find the best model at predicting postseason ranking based on season factors. For the purposes of the models we also decided to choose only teams that have made the tournament for our dataset, since we are looking at predictions for seed and not whether or not a team makes the tournament. These season factors include adjusted offensive efficiency (expected score given 100 possessions), adjusted defensive efficiency (expected opponent score given 100 possessions), Turn Over Percentage, Offensive Rebound Percentage, and Free Throw Rate. We decided based off of initial visualizations that the adjusted defensive and offensive efficiencies would be the best as they tended to have the strongest correlation to seed. We chose to use linear regressions because we wanted to show a predicted value based on offensive and defensive efficiencies. A hypothesis test would only be able to give us an idea if they make a difference in seeding, but not be able to predict the seed. We also will then go and use adjusted r-suqared which will tell us how well fit our models are to our data set while also accounting for predictors that may be insignificant (higher the better). We also will use an AIC value to compare models (from teh same dataset) since AIC is a good evaluation of if the model is a good fit for the data it was derived from and takes into account under and also over prediction of the model (lower value is better). It is also worth noting that seed is considered a numeric variable in the models and in the dataset.</p>
+<p>Visualizations of Possible Predictors Not Used</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1979 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/testing-other-predictors-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1979 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/testing-other-predictors-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1979 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/testing-other-predictors-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <p><strong>Our research question: “How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?”</strong></p>
-<p>Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program’s success and determine their ‘weight’ in assigning regular season rankings. With this we hoe to find teh best predictor for end of regular season seed given the team makes the ncaa tournament (or if the predicted seed is above 16 then they do not make the tournament).</p>
+<p>Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program’s success and determine their ‘weight’ in assigning regular season rankings. With this we hope to find the best predictor for end of regular season seed given the team makes the NCAA tournament (or if the predicted seed is above 16 then they do not make the tournament).</p>
 <p><strong>Results</strong></p>
 <p>– What are you finding out? We are finding out the best correlation between seeds and adjusted offensive efficiency/ adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).</p>
 <div class="cell">
@@ -273,7 +295,7 @@ Coefficients:
 <pre><code>[1] 2063.377</code></pre>
 </div>
 </div>
-<p>The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r -squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is “We predict that, in regular season, teams with higher adjusted offensive efficiency &amp; lower adjusted defensive efficiency will be predicted to have higher seeds.”</p>
+<p>The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r-squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is “We predict that, in regular season, teams with higher adjusted offensive efficiency &amp; lower adjusted defensive efficiency will be predicted to have higher seeds.”</p>
 
 
 
