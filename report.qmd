@@ -35,11 +35,11 @@ The dataset has various variables that characterize different Division I basketb
 
 **Our research question: "How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?"**
 
-Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. This processes is then applied to investigate if such factor better predicts post season success/ pre-season rankings for the next basketball season.
+Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program's success and determine their 'weight' in assigning regular season rankings. With this we hoe to find teh best predictor for end of regular season seed given the team makes the ncaa tournament (or if the predicted seed is above 16 then they do not make the tournament).
 
 **Results**
 
--- What are you finding out? We are finding out the correlation between seeds when predicted by adjusted offensive efficiency and adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
+-- What are you finding out? We are finding out the best correlation between seeds and adjusted offensive efficiency/ adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).
 
 ```{r}
 #| label: rename-cbb
