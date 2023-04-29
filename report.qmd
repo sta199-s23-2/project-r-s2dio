@@ -105,8 +105,10 @@ cbb |>
          "Relationship Between Adjusted 
        Offensive Efficiency and Seed") +
   geom_smooth(method = "lm", se = F)
+```
 
 
+```{r}
 cbb |>
   ggplot(aes(x = ADJDE,
              y = SEED)) +
@@ -116,8 +118,10 @@ cbb |>
          "Relationship Between Adjusted 
        Defensive Efficiency and Seed") +
     geom_smooth(method = "lm", se = F)
+```
 
 
+```{r}
 #another way to look at the data (not for linear regression)
 cbb_new |>
   ggplot(
@@ -131,6 +135,8 @@ cbb_new |>
   scale_color_viridis_c()
 
 ```
+
+
 
 **Fitting Our Models**
 
