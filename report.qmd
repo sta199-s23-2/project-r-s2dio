@@ -100,14 +100,13 @@ cbb |>
   ggplot(aes(x = ADJOE,
              y = SEED)) +
   geom_point() +
-  labs(x = "Adjusted Offensve Efficiency", y = "Seed",
+  labs(x = "Adjusted Offensive Efficiency", y = "Seed",
        title = 
          "Relationship Between Adjusted 
        Offensive Efficiency and Seed") +
   geom_smooth(method = "lm", se = F)
 ```
-
-
+The graph above shows a strong negative correlation between seeding and adjusted offensive efficiency. This correlation shows that as adjusted offensive efficiency increases, seeding tends to also be lower (better). This outcomes makes sense, as 'better' teams should score more points per 100 possessions.
 ```{r}
 cbb |>
   ggplot(aes(x = ADJDE,
@@ -119,8 +118,7 @@ cbb |>
        Defensive Efficiency and Seed") +
     geom_smooth(method = "lm", se = F)
 ```
-
-
+The graph above shows a strong positive correlation between seeding and adjusted defensive efficiency. This correlation shows that as adjusted defensive efficiency increases, seeding tends to also be higher (worse). This outcomes makes sense, as 'better' teams should not give up as many points as 'worse' teams per 100 possesions.
 ```{r}
 #another way to look at the data (not for linear regression)
 cbb_new |>
@@ -135,7 +133,7 @@ cbb_new |>
   scale_color_viridis_c()
 
 ```
-
+The graph above shows how the relationship that both offensive and defensive efficiency has with seed plays out. Teams with both higher offensive and lower defensive efficiencies have better seeds. This makes sense given the first two graphs, but it is also helpful to see both factors relative to seed.
 
 
 **Fitting Our Models**
@@ -182,6 +180,10 @@ $\widehat{SEED} = 183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
 Model4 (predicting seed based on adjusted offensive and defensive efficiency \[additive model\])
 
 $\widehat{SEED} = 13.6156 - 0.43*ADJOE + 0.45*ADJDE$
+
+Notes:
+- we do not extrapolate data because the predictions will be extended beyond (significantly) a 16 or 1 seed
+- the 3rd chart is not representative directly of our interactive and additive models.
 
 **Finding Adjusted R-Squared**
 
