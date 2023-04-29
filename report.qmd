@@ -105,8 +105,9 @@ cbb |>
          "Relationship Between Adjusted 
        Offensive Efficiency and Seed") +
   geom_smooth(method = "lm", se = F)
-
-
+```
+The graph above shows a strong negative correlation between seeding and adjusted offensive efficiency. This correlation shows that as adjusted offensive efficiency increases, seeding tends to also be lower (better). This outcomes makes sense, as 'better' teams should score more points per 100 possessions.
+```{r}
 cbb |>
   ggplot(aes(x = ADJDE,
              y = SEED)) +
@@ -116,8 +117,9 @@ cbb |>
          "Relationship Between Adjusted 
        Defensive Efficiency and Seed") +
     geom_smooth(method = "lm", se = F)
-
-
+```
+The graph above shows a strong positive correlation between seeding and adjusted defensive efficiency. This correlation shows that as adjusted defensive efficiency increases, seeding tends to also be higher (worse). This outcomes makes sense, as 'better' teams should not give up as many points as 'worse' teams per 100 possesions.
+```{r}
 #another way to look at the data (not for linear regression)
 cbb_new |>
   ggplot(
@@ -127,9 +129,12 @@ cbb_new |>
   geom_point() +
   labs(x = "Adjusted Offensive Efficiency", y = "Adjusted Defensive Efficiency",
        title = "Adjusted Offensive Efficiency, Adjusted Defensive Efficiency
-       and End of Regular Season Seed") 
+       and End of Regular Season Seed") +
+  scale_color_viridis_c()
 
 ```
+The graph above shows how the relationship that both offensive and defensive efficiency has with seed plays out. Teams with both higher offensive and lower defensive efficiencies have better seeds. This makes sense given the first two graphs, but it is also helpful to see both factors relative to seed.
+
 
 **Fitting Our Models**
 
@@ -175,6 +180,10 @@ $\widehat{SEED} = 183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE$
 Model4 (predicting seed based on adjusted offensive and defensive efficiency \[additive model\])
 
 $\widehat{SEED} = 13.6156 - 0.43*ADJOE + 0.45*ADJDE$
+
+Notes:
+- we do not extrapolate data because the predictions will be extended beyond (significantly) a 16 or 1 seed
+- the 3rd chart is not representative directly of our interactive and additive models.
 
 **Finding Adjusted R-Squared**
 
@@ -306,4 +315,4 @@ SEED_Model_4
 
 In looking at the graphs, we can see the trend between a higher seed and the respective efficiency of offense or defense. When looking at adjusted offensive efficiency, we see as efficiency increases, seed "decreases" (approaches 1). A "lower" seed, in this case, is better. We see the opposite trend in adjusted defensive efficiency. A team seeks to have a lower adjusted defensive efficiency. In our second graph, we see that those teams with a "lower" seed have a lower adjusted defensive efficiency. This would align itself with our hypothesis. However, we want to know whether either of these predictors is better at determining seed. To do this, our models prove effective at determining this.
 
-We have three models: one with only ADJOE, one with only ADJDE, and one with an interaction between the two. The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r-squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predict that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency will be predicted to have higher seeds."
+We have three models: one with only ADJOE, one with only ADJDE, and one with an interaction between the two. The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r-squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency, adjusted offensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is "We predict that, in regular season, teams with higher adjusted offensive efficiency & lower adjusted defensive efficiency will be predicted to have higher seeds."
