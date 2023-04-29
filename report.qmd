@@ -100,7 +100,7 @@ cbb |>
   ggplot(aes(x = ADJOE,
              y = SEED)) +
   geom_point() +
-  labs(x = "Adjusted Offensve Efficiency", y = "Seed",
+  labs(x = "Adjusted Offensive Efficiency", y = "Seed",
        title = 
          "Relationship Between Adjusted 
        Offensive Efficiency and Seed") +
