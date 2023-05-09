@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.0.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,15 +11,10 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
 </style>
 
 
@@ -123,7 +118,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <div class="cell">
-
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tidyr' was built under R version 4.2.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'readr' was built under R version 4.2.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'purrr' was built under R version 4.2.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'broom' was built under R version 4.2.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dials' was built under R version 4.2.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'parsnip' was built under R version 4.2.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'recipes' was built under R version 4.2.2</code></pre>
+</div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
@@ -173,7 +191,8 @@ dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
 <p><strong>Our research question: “How does regular season adjusted offensive efficiency, and regular season adjusted defensive efficiency correlate to being a 1-seed team and post season success?”</strong></p>
 <p>Our central research question is addressed through the analysis of the factors that best predict overall regular season success from 2013 to 2019. We might be able to filter out the different factors that play a role in each program’s success and determine their ‘weight’ in assigning regular season rankings. With this we hope to find the best predictor for end of regular season seed given the team makes the NCAA tournament (or if the predicted seed is above 16 then they do not make the tournament).</p>
 <p><strong>Results</strong></p>
-<p>– What are you finding out? We are finding out the best correlation between seeds and adjusted offensive efficiency/ adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).</p>
+<p>– What are you finding out?</p>
+<p>We are finding out the best correlation between seeds and adjusted offensive efficiency/ adjusted defensive efficiency, as well as finding which predictor is the best (out of adjusted offensive efficiency, adjusted defensive efficiency, or both).</p>
 <div class="cell">
 
 </div>
@@ -182,13 +201,29 @@ dbl (21): G, W, ADJOE, ADJDE, BARTHAG, EFG_O, EFG_D, TOR, TORD, ORB, DRB, FT...
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/visualization-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="cell-output-display">
-<p><img src="report_files/figure-html/visualization-2.png" class="img-fluid" width="672"></p>
+</div>
+<p>The graph above shows a strong negative correlation between seeding and adjusted offensive efficiency. This correlation shows that as adjusted offensive efficiency increases, seeding tends to also be lower (better). This outcomes makes sense, as ‘better’ teams should score more points per 100 possessions.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1979 rows containing non-finite values (`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1979 rows containing missing values (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="report_files/figure-html/visualization-3.png" class="img-fluid" width="672"></p>
+<p><img src="report_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The graph above shows a strong positive correlation between seeding and adjusted defensive efficiency. This correlation shows that as adjusted defensive efficiency increases, seeding tends to also be higher (worse). This outcomes makes sense, as ‘better’ teams should not give up as many points as ‘worse’ teams per 100 possesions.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The graph above shows how the relationship that both offensive and defensive efficiency has with seed plays out. Teams with both higher offensive and lower defensive efficiencies have better seeds. This makes sense given the first two graphs, but it is also helpful to see both factors relative to seed.</p>
 <p><strong>Fitting Our Models</strong></p>
 <div class="cell" data-lable="linear-reg">
 <div class="cell-output cell-output-stdout">
@@ -244,6 +279,9 @@ Coefficients:
 <p><span class="math inline">\(\widehat{SEED} = 183.59 - 1.98*ADJOE - 1.29*ADJDE + 0.02*ADJOE*ADJDE\)</span></p>
 <p>Model4 (predicting seed based on adjusted offensive and defensive efficiency [additive model])</p>
 <p><span class="math inline">\(\widehat{SEED} = 13.6156 - 0.43*ADJOE + 0.45*ADJDE\)</span></p>
+<p>Notes:</p>
+<p>- we do not extrapolate data because the predictions will be extended beyond (significantly) a 16 or 1 seed</p>
+<p>- the 3rd chart is not representative directly of our interactive and additive models.</p>
 <p><strong>Finding Adjusted R-Squared</strong></p>
 <div class="cell">
 
@@ -302,7 +340,7 @@ Coefficients:
 </div>
 <p><strong>Discussion</strong></p>
 <p>In looking at the graphs, we can see the trend between a higher seed and the respective efficiency of offense or defense. When looking at adjusted offensive efficiency, we see as efficiency increases, seed “decreases” (approaches 1). A “lower” seed, in this case, is better. We see the opposite trend in adjusted defensive efficiency. A team seeks to have a lower adjusted defensive efficiency. In our second graph, we see that those teams with a “lower” seed have a lower adjusted defensive efficiency. This would align itself with our hypothesis. However, we want to know whether either of these predictors is better at determining seed. To do this, our models prove effective at determining this.</p>
-<p>We have three models: one with only ADJOE, one with only ADJDE, and one with an interaction between the two. The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r-squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is “We predict that, in regular season, teams with higher adjusted offensive efficiency &amp; lower adjusted defensive efficiency will be predicted to have higher seeds.”</p>
+<p>We have three models: one with only ADJOE, one with only ADJDE, and one with an interaction between the two. The interactive model (with both adjusted offensive and defensive efficiency) is the best model with the highest adjusted r-squared value (with the additive model just barely less accurate with a slightly lower adjusted r-squared value and a slightly higher AIC). Adjusted offensive efficiency is the third best predictor closely followed by defensive efficiency (but both are individually less correlated with their seed). This means that between offensive and defensive efficiency, adjusted offensive efficiency is slightly more important when it comes to seeding, but both combined are the most important when it comes to predicting seed. These results do match our hypothesis which again is “We predict that, in regular season, teams with higher adjusted offensive efficiency &amp; lower adjusted defensive efficiency will be predicted to have higher seeds.”</p>
 
 
 
@@ -376,8 +414,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      let href = ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
